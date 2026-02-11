@@ -1,7 +1,9 @@
 from zoneinfo import ZoneInfo
 from datetime import datetime
 from app.db import SessionLocal
-from app.models_audit import AuditLog
+from app.agents.logger import log_event
+from app.models import AuditLog
+
 
 def log_event(
     user_id: int,

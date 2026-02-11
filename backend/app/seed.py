@@ -1,7 +1,7 @@
 from app.db import SessionLocal, engine, Base
-from app.models_auth import User
+from app.models import User
 from app.models import Bill
-from app.models_account import Account
+from app.models import Account
 from app.security import hash_password
 
 

@@ -3,10 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy.exc import OperationalError
 import time
+from app.models import User, Account, Bill, Transaction
 
 from app.config import settings
 from app.db import SessionLocal
-from app.models_auth import User
 from app.security import verify_password, create_access_token
 from app.seed import seed_db
 

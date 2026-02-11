@@ -3,7 +3,7 @@ from zoneinfo import ZoneInfo
 
 from app.db import SessionLocal
 from app.models import Bill
-from app.models_transaction import Transaction
+from app.models import Transaction
 from app.services.redis_service import redis_client
 from app.services.mock_banking import debit
 from app.agents.audit_agent import log_event
