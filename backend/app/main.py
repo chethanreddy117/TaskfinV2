@@ -79,6 +79,15 @@ def agent_chat(
 # ME
 @app.get("/me")
 def me(authorization: str = Header(...)):
+    """
+    Return the authenticated user's ID extracted from the Authorization header.
+    
+    Parameters:
+        authorization (str): The raw value of the `Authorization` header containing the user's credentials or token.
+    
+    Returns:
+        dict: A dictionary with key `user_id` set to the extracted user identifier.
+    """
     user_id = resolve_user_id(authorization)
     return {"user_id": user_id}
 
